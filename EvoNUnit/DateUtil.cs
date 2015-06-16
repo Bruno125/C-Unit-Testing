@@ -61,7 +61,7 @@ namespace EvoNUnit
             {
                 return DateTime.Parse(DateString(day,month,year));
             }
-            catch (FormatException)
+            catch (Exception)
             {
                 return null;
             }

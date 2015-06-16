@@ -51,6 +51,35 @@ namespace EvoNUnit
             }
         }
 
+        //Assert object
+        [Test]
+        public void IntervaloObjectTest()
+        {
+            string[] cases = TestUtil.ReadTests(CLASS_NAME, "IntervaloObjectTest");
+            foreach (string mCase in cases)
+            {
+                string[] values = mCase.Split(' ');
+                TimeSpan result1 = DateUtil.Intervalo(values[0], values[1]);
+                TimeSpan result2 = DateUtil.Intervalo(values[2], values[3]);
+                Assert.AreEqual(result1,result2);
+            }
+        }
+
+        [Test]
+        public void DateStringCanBeNullDiferentObjectTest()
+        {
+            string[] cases = TestUtil.ReadTests(CLASS_NAME, "DateStringCanBeNullDiferentObjectTest");
+            foreach (string mCase in cases)
+            {
+                string[] values = mCase.Split(' ');
+                DateTime? result1 = DateUtil.DateStringCanBeNull(
+                    Int32.Parse(values[0]), Int32.Parse(values[1]), Int32.Parse(values[2]));
+                DateTime? result2 = DateUtil.DateStringCanBeNull(
+                    Int32.Parse(values[0]), Int32.Parse(values[1]), Int32.Parse(values[2]));
+                Assert.AreNotSame(result1, result2);
+            }
+        }
+
         //Assert boolean
         [Test]
         public void IsLeapYearTest()
@@ -93,7 +122,10 @@ namespace EvoNUnit
             foreach (string mCase in cases)
             {
                 string[] values = mCase.Split(' ');
-                Assert.IsNull(DateUtil.Intervalo(values[0], values[1]));
+                int day = Int32.Parse(values[0]);
+                int month = Int32.Parse(values[1]);
+                int year = Int32.Parse(values[2]);
+                Assert.IsNull(DateUtil.DateStringCanBeNull(day,month,year));
             }
         }
 

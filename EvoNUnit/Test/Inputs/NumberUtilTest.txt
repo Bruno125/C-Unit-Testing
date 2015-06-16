@@ -1,0 +1,10 @@
+GetNonZeroRandomNumberTest
+100
+end_test
+ListOfPairsTest
+10 2 4 6 8 10
+20 2 4 6 8 10 12 14 16 18 20
+4 2 4
+0
+3 2
+end_test

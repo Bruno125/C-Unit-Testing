@@ -1,0 +1,44 @@
+DateDiffInDaysTest
+12/05/2015 05/05/2015 7
+01/05/2015 17/05/2015 16
+01/05/2015 01/05/2014 365
+01/05/2015 30/04/2015 1	
+end_test
+DateDiffInDaysPositiveTest
+12/05/2015 05/05/2015
+01/05/2015 17/05/2015
+01/05/2015 01/05/2014
+01/05/2015 30/04/2015
+end_test
+IntervaloFormatExceptionTest
+-5/05/2015 05/05/2015
+50/05/2015 17/05/2015
+12/34/2015 01/05/2014
+end_test
+IsLeapYearTest
+1996 true
+2001 false
+2005 false
+end_test
+IsLeapYearTrueTest
+1996
+2000
+2004
+end_test
+IsLeapYearFalseTest
+1997
+2001
+2005
+end_test
+DateStringTest
+12 05 2015 12/05/2015
+31 05 2015 31/05/2015
+end_test
+DateStringExceptionTest
+-5 05 2015
+32 05 2015
+end_test
+DateStringCanBeNull
+-5 05 2015
+32 05 2015
+end_test

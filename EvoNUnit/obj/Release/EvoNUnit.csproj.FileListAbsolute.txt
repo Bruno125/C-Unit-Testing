@@ -1,0 +1,7 @@
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\bin\Release\EvoNUnit.dll
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\bin\Release\EvoNUnit.pdb
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\bin\Release\nunit.framework.dll
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\bin\Release\nunit.framework.xml
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\obj\Release\EvoNUnit.csprojResolveAssemblyReference.cache
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\obj\Release\EvoNUnit.dll
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit\obj\Release\EvoNUnit.pdb

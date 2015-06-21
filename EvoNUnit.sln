@@ -6,6 +6,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvoNUnit", "EvoNUnit\EvoNUnit.csproj", "{5723410A-DD38-4340-8A08-BE7568DC1DDD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A9C67A5C-DD86-4575-A39B-9B61E80125BF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvoNUnit.Test", "EvoNUnit.Test\EvoNUnit.Test.csproj", "{7482C87A-0DA6-441E-86E9-8222ECA1123B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +22,10 @@ Global
 		{5723410A-DD38-4340-8A08-BE7568DC1DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5723410A-DD38-4340-8A08-BE7568DC1DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5723410A-DD38-4340-8A08-BE7568DC1DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7482C87A-0DA6-441E-86E9-8222ECA1123B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7482C87A-0DA6-441E-86E9-8222ECA1123B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7482C87A-0DA6-441E-86E9-8222ECA1123B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7482C87A-0DA6-441E-86E9-8222ECA1123B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,6 @@ IsExactTest
 123,0000 true
 2 true
 5,0 true
-123,12 false
 end_test
 
 VeryBasicFibonacciTest

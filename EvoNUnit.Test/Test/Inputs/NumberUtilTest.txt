@@ -27,10 +27,10 @@ IsMultipleTest
 end_test
 
 IsExactTest
-123.0000 true
-2.1 false
-2.2 true
-5.0 true
+123,0000 true
+2,1 false
+2,2 false
+5,0 true
 end_test
 
 VeryBasicFibonacciTest

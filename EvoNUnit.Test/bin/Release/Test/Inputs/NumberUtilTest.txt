@@ -20,7 +20,7 @@ end_test
 
 IsMultipleTest
 6 5 false
-50 10 false
+50 10 true
 50 11 false
 121 11 true
 160 39 false

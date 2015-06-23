@@ -75,20 +75,18 @@ namespace EvoNUnit
             }
         }
 
-
-        //[Test]
-        //public void IsExactTest()
-        //{
-        //    string[] cases = TestUtil.ReadTests(CLASS_NAME, "IsExactTest");
-        //    foreach (string mCase in cases)
-        //    {
-        //        string[] values = mCase.Split(' ');
-        //        bool expected = Boolean.Parse(values[1]);
-        //        bool result = NumberUtil.IsExact(Double.Parse(values[0]));
-        //        Assert.AreEqual(expected,result);
-        //    }
-        //}
-
+        [Test]
+        public void IsExactTest()
+        {
+            string[] cases = TestUtil.ReadTests(CLASS_NAME, "IsExactTest");
+            foreach (string mCase in cases)
+            {
+                string[] values = mCase.Split(' ');
+                bool expected = Boolean.Parse(values[1]);
+                bool result = NumberUtil.IsExact(Double.Parse(values[0]));
+                Assert.AreEqual(expected, result);
+            }
+        }
 
         //[Test, MaxTime(2000)]
         [Test]

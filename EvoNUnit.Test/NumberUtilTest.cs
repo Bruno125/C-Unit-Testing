@@ -88,8 +88,8 @@ namespace EvoNUnit
             }
         }
 
-        //[Test, MaxTime(2000)]
-        [Test]
+        [Test, MaxTime(2000)]
+        //[Test]
         public void VeryBasicFibonacciTest()
         {
             string[] cases = TestUtil.ReadTests(CLASS_NAME, "VeryBasicFibonacciTest");

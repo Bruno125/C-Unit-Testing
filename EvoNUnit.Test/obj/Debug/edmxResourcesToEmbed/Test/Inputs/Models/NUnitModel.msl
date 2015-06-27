@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NUnitModelStoreContainer" CdmEntityContainer="NUnitEntities1">
+    <EntitySetMapping Name="IsBetweenTest">
+      <EntityTypeMapping TypeName="NUnitModel.IsBetweenTest">
+        <MappingFragment StoreEntitySet="IsBetweenTest">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lower_bound" ColumnName="lower_bound" />
+          <ScalarProperty Name="upper_bound" ColumnName="upper_bound" />
+          <ScalarProperty Name="expected" ColumnName="expected" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsExactTest">
+      <EntityTypeMapping TypeName="NUnitModel.IsExactTest">
+        <MappingFragment StoreEntitySet="IsExactTest">
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="expected" ColumnName="expected" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsMultipleTest">
+      <EntityTypeMapping TypeName="NUnitModel.IsMultipleTest">
+        <MappingFragment StoreEntitySet="IsMultipleTest">
+          <ScalarProperty Name="value1" ColumnName="value1" />
+          <ScalarProperty Name="value2" ColumnName="value2" />
+          <ScalarProperty Name="expected" ColumnName="expected" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

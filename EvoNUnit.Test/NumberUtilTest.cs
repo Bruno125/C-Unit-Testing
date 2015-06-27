@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using EvoNUnit.Test.Util;
+using EvoNUnit.Test.Test.Inputs.Models;
 
 namespace EvoNUnit
 {
     public class NumberUtilTest
     {
         private static readonly string CLASS_NAME = "NumberUtilTest";
-
+        private NUnitEntities1 NUnitEntities = new NUnitEntities1();
         //Assert not equal
         [Test]
         public void GetNonZeroRandomNumberTest()
@@ -59,20 +60,37 @@ namespace EvoNUnit
 
         //Otros tests
 
-        [Test]
-        public void IsMultipleTest()
+        //[Test]
+        //public void IsMultipleTest()
+        //{
+        //    string[] cases = TestUtil.ReadTests(CLASS_NAME, "IsMultipleTest");
+        //    foreach (string mCase in cases)
+        //    {
+        //        string[] values = mCase.Split(' ');
+        //        bool expected = Boolean.Parse(values[2]);
+        //        int n1 = Int32.Parse(values[0]),n2 = Int32.Parse(values[1]);
+        //        if (expected)
+        //            Assert.IsTrue(NumberUtil.IsMultiple(n1, n2));
+        //        else
+        //            Assert.IsFalse(NumberUtil.IsMultiple(n1, n2));
+        //    }
+        //}
+
+        [Test, TestCaseSource("GetIsMultipleTest")]
+        public void IsMultipleTest(IsMultipleTest input)
         {
-            string[] cases = TestUtil.ReadTests(CLASS_NAME, "IsMultipleTest");
-            foreach (string mCase in cases)
-            {
-                string[] values = mCase.Split(' ');
-                bool expected = Boolean.Parse(values[2]);
-                int n1 = Int32.Parse(values[0]),n2 = Int32.Parse(values[1]);
-                if (expected)
-                    Assert.IsTrue(NumberUtil.IsMultiple(n1, n2));
-                else
-                    Assert.IsFalse(NumberUtil.IsMultiple(n1, n2));
-            }
+            bool expected = (bool)input.expected;
+            int n1 = (int) input.value1, n2 =(int)input.value2;
+            if (expected)
+                Assert.IsTrue(NumberUtil.IsMultiple(n1, n2));
+            else
+                Assert.IsFalse(NumberUtil.IsMultiple(n1, n2));
+            
+        }
+
+        public IList<IsMultipleTest> GetIsMultipleTest()
+        {
+            return NUnitEntities.IsMultipleTest.ToList();
         }
 
         [Test]

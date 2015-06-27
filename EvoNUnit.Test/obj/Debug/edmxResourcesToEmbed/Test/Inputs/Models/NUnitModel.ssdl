@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NUnitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IsBetweenTest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="value" Type="int" />
+    <Property Name="lower_bound" Type="int" />
+    <Property Name="upper_bound" Type="int" />
+    <Property Name="expected" Type="bit" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsExactTest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="value" Type="float" />
+    <Property Name="expected" Type="bit" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsMultipleTest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="value1" Type="int" />
+    <Property Name="value2" Type="int" />
+    <Property Name="expected" Type="bit" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="NUnitModelStoreContainer">
+    <EntitySet Name="IsBetweenTest" EntityType="Self.IsBetweenTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsExactTest" EntityType="Self.IsExactTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsMultipleTest" EntityType="Self.IsMultipleTest" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

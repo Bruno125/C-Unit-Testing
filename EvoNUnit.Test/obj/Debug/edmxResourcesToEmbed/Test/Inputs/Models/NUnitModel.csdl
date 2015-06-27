@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NUnitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IsBetweenTest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="value" Type="Int32" />
+    <Property Name="lower_bound" Type="Int32" />
+    <Property Name="upper_bound" Type="Int32" />
+    <Property Name="expected" Type="Boolean" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="IsExactTest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="value" Type="Double" />
+    <Property Name="expected" Type="Boolean" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="IsMultipleTest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="value1" Type="Int32" />
+    <Property Name="value2" Type="Int32" />
+    <Property Name="expected" Type="Boolean" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="NUnitEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IsBetweenTest" EntityType="Self.IsBetweenTest" />
+    <EntitySet Name="IsExactTest" EntityType="Self.IsExactTest" />
+    <EntitySet Name="IsMultipleTest" EntityType="Self.IsMultipleTest" />
+  </EntityContainer>
+</Schema>

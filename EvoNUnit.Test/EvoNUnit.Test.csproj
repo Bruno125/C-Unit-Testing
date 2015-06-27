@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.core">
       <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
       <Private>False</Private>
@@ -50,7 +56,10 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +70,30 @@
     <Compile Include="DateUtilTest.cs" />
     <Compile Include="NumberUtilTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\Inputs\Models\IsBetweenTest.cs">
+      <DependentUpon>NUnitModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Inputs\Models\IsExactTest.cs">
+      <DependentUpon>NUnitModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Inputs\Models\IsMultipleTest.cs">
+      <DependentUpon>NUnitModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Inputs\Models\NUnitModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NUnitModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Inputs\Models\NUnitModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NUnitModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Inputs\Models\NUnitModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NUnitModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Test\Util\TestUtil.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +105,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="Test\Inputs\Models\NUnitModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NUnitModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Test\Inputs\Models\NUnitModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NUnitModel.edmx</DependentUpon>
+      <LastGenOutput>NUnitModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Test\Inputs\Models\NUnitModel.edmx.diagram">
+      <DependentUpon>NUnitModel.edmx</DependentUpon>
+    </None>
+    <None Include="Test\Inputs\Models\NUnitModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NUnitModel.edmx</DependentUpon>
+      <LastGenOutput>NUnitModel.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EvoNUnit\EvoNUnit.csproj">
@@ -81,6 +132,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

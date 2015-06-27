@@ -9,3 +9,8 @@ C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\
 C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\obj\Debug\EvoNUnit.Test.csprojResolveAssemblyReference.cache
 C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\obj\Debug\EvoNUnit.Test.dll
 C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\obj\Debug\EvoNUnit.Test.pdb
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\bin\Debug\EvoNUnit.Test.dll.config
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\bin\Debug\EntityFramework.dll
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\bin\Debug\EntityFramework.xml
+C:\Bruno_UPC\Ciclo 2015-01\Evolución del Software\NUnit\EvoNUnit\EvoNUnit.Test\bin\Debug\EntityFramework.SqlServer.xml

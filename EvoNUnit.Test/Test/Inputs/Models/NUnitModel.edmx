@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NUnitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IsBetweenTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="value" Type="int" />
+          <Property Name="lower_bound" Type="int" />
+          <Property Name="upper_bound" Type="int" />
+          <Property Name="expected" Type="bit" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IsExactTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="value" Type="float" />
+          <Property Name="expected" Type="bit" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IsMultipleTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="value1" Type="int" />
+          <Property Name="value2" Type="int" />
+          <Property Name="expected" Type="bit" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="NUnitModelStoreContainer">
+          <EntitySet Name="IsBetweenTest" EntityType="Self.IsBetweenTest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IsExactTest" EntityType="Self.IsExactTest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IsMultipleTest" EntityType="Self.IsMultipleTest" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NUnitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IsBetweenTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="value" Type="Int32" />
+          <Property Name="lower_bound" Type="Int32" />
+          <Property Name="upper_bound" Type="Int32" />
+          <Property Name="expected" Type="Boolean" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="IsExactTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="value" Type="Double" />
+          <Property Name="expected" Type="Boolean" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="IsMultipleTest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="value1" Type="Int32" />
+          <Property Name="value2" Type="Int32" />
+          <Property Name="expected" Type="Boolean" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="NUnitEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IsBetweenTest" EntityType="Self.IsBetweenTest" />
+          <EntitySet Name="IsExactTest" EntityType="Self.IsExactTest" />
+          <EntitySet Name="IsMultipleTest" EntityType="Self.IsMultipleTest" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NUnitModelStoreContainer" CdmEntityContainer="NUnitEntities1">
+          <EntitySetMapping Name="IsBetweenTest">
+            <EntityTypeMapping TypeName="NUnitModel.IsBetweenTest">
+              <MappingFragment StoreEntitySet="IsBetweenTest">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="lower_bound" ColumnName="lower_bound" />
+                <ScalarProperty Name="upper_bound" ColumnName="upper_bound" />
+                <ScalarProperty Name="expected" ColumnName="expected" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IsExactTest">
+            <EntityTypeMapping TypeName="NUnitModel.IsExactTest">
+              <MappingFragment StoreEntitySet="IsExactTest">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="expected" ColumnName="expected" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IsMultipleTest">
+            <EntityTypeMapping TypeName="NUnitModel.IsMultipleTest">
+              <MappingFragment StoreEntitySet="IsMultipleTest">
+                <ScalarProperty Name="value1" ColumnName="value1" />
+                <ScalarProperty Name="value2" ColumnName="value2" />
+                <ScalarProperty Name="expected" ColumnName="expected" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
